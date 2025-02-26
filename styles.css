@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+img {
+   max-width: 100%;
+}
+
+p, h1, h2 {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+   padding: 3em 0;
+   background-color: #fefefe;
+   color: hsl(212, 6%, 44%);
+   font-size: 15px;
+}
+  
+.container {
+   width: 80%;
+   margin: 0 auto;
+   max-width: 1200px;
+   margin-bottom: 2em;
+}
+  
+.title {
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 3.5em;
+}
+
+.title__head {
+   font-size:1.39rem;
+   color:  #697077;
+   font-weight: 300;
+   margin-bottom: 0.5em;
+   line-height: 1.4;
+}
+
+.title__head-bold {
+   color: #4c4e61;
+   font-weight: 600;
+}
+
+.section {
+   background-color: white;
+   box-shadow: 0.5px 8px 15px rgba(158, 185, 233, 0.4);
+   border-radius: 6px;
+   padding: 2em 2em 2.8em 2em ;
+   display: grid;
+   grid-gap: 30px;
+}
+
+
+.grid {
+   display: grid;
+   grid-gap: 35px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(4, auto);
+   grid-template-areas:
+      "supervisor supervisor supervisor"
+      "team team team"
+      "karma karma karma"
+      "calculator calculator calculator";
+}
+
+.supervisor {
+   grid-area: supervisor;
+   border-top: 4px solid #45d3d3;
+}
+
+.team {
+   grid-area: team;
+   border-top: 4px solid #ea5353;
+}
+
+.karma {
+   grid-area: karma;
+   border-top: 4px solid  #fcaf4a;
+}
+
+.calculator {
+   grid-area: calculator;
+   border-top: 4px solid #549ef2;
+}
+
+.section-img {
+   justify-self: flex-end;
+}
+.section-text h2 {
+   font-size: 1.3rem;
+   color: #4c4e61;
+   margin-bottom: .4em;
+}
+
+.section-text p {
+   font-size: 14px;
+   color: #7e858d;
+}
+
+/* FOOTER STYLING */
+.attribution { 
+   font-size: 11px; 
+   text-align: center; 
+}
+
+.attribution a { 
+   color: hsl(228, 45%, 44%); 
+}
+
+/* MEDIA QUERIES */
+@media(min-width:700px) {
+   .title__pgraph {
+      width: 70%;
+      margin: 0 auto;
+   }
+}
+
+@media(min-width:900px) {
+   body{
+      padding: 5em 0;
+   }
+   .title {
+      width: 50%;
+   }
+
+   .title__pgraph {
+      font-size:1rem
+   }
+
+   .title__head {
+      font-size: 2.4em;
+   }
+
+   .grid {
+      grid-template-areas:
+      ". team ."
+      "supervisor team calculator"
+      "supervisor karma calculator"
+      ". karma .";
+   }
+
+}
